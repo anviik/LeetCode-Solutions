@@ -7,15 +7,13 @@ class Solution:
             elif tokens[i] == "-":
                 a = int(stack.pop())
                 b = int(stack.pop())
-                ans = b-a
-                stack.append(ans)
+                stack.append(b-a)
             elif tokens[i] == "*":
                 stack.append(stack.pop() * stack.pop())
             elif tokens[i] == "/":
                 a = int(stack.pop())
                 b = int(stack.pop())
-                ans = int(b/a)
-                stack.append(ans)
+                stack.append(int(b/a))
             else:
                 stack.append(int(tokens[i]))
         return stack[0]
