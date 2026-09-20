@@ -10,7 +10,7 @@ class Solution:
         def bfs(node):
             q = collections.deque()
             seen.add(node)
-            q.append((-1,node))
+            q.append((-1, node))
             
             while q:
                 parent, x = q.popleft()
@@ -19,7 +19,7 @@ class Solution:
                         continue
                     if i in seen:
                         return False
-                    q.append((x,i))
+                    q.append((x, i))
                     seen.add(i)
             return True
         
