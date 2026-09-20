@@ -13,10 +13,12 @@ class Solution:
             return 
         copy = {}
         def dfs(node):
-            if node in copy:
+            if node not in copy:
+                newnode = Node(node.val)
+                copy[node] = newnode
+            else:
                 return copy[node]
-            newnode = Node(node.val)
-            copy[node] = newnode
+
             for n in node.neighbors:
                 newnode.neighbors.append(dfs(n))
             return newnode
