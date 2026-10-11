@@ -8,7 +8,7 @@ class Solution:
             while q:
                 cur = q.popleft()
                 for i in range(len(isConnected)):
-                    if isConnected[cur][i] == 1 and i not in visited:
+                    if isConnected[i][cur] == 1 and i not in visited:
                         visited.add(i)
                         q.append(i)
 
